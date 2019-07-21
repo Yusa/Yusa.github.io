@@ -424,16 +424,16 @@ th {
 }
 */
 
-p, blockquote, ul, ol, dl, li, table, pre {
+p, blockquote_custom, ul, ol, dl, li, table, pre {
   margin: 15px 0; }
 
-blockquote {
+blockquote_custom {
   border-left: 4px solid #dddddd;
   padding: 0 15px;
   color: #777777; }
-  blockquote > :first-child {
+  blockquote_custom > :first-child {
     margin-top: 0; }
-  blockquote > :last-child {
+  blockquote_custom > :last-child {
     margin-bottom: 0; }
 
 
