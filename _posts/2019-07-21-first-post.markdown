@@ -33,16 +33,15 @@ If you can take the address of the expression then it is LVALUE; if not, then it
 </p>
 
 <p class="blockquote_custom">
-
-	An **_lvalue_** has an **address** that your program can access. Examples of lvalue expressions include variable names, including const variables, array elements, function calls that return an lvalue reference, bit-fields, unions, and class members.
-
-	A **_prvalue_** expression has **no address** that is accessible by your program. Examples of prvalue expressions include literals, function calls that return a non-reference type, and temporary objects that are created during expression evalution but accessible only by the compiler.
-
-	An **_xvalue_** expression has **an address that no longer accessible by your program** but can be used to initialize an rvalue reference, which provides access to the expression. Examples include function calls that return an rvalue reference, and the array subscript, member and pointer to member expressions where the array or object is an rvalue reference.
-
-	A **_glvalue_** is an expression whose evaluation determines the identity of an object, bit-field, or function.
-
-	An **_rvalue_** is a prvalue or an xvalue.
+	An <em><strong>lvalue</strong></em> has an <strong>address</strong> that your program can access. Examples of lvalue expressions include variable names, including const variables, array elements, function calls that return an lvalue reference, bit-fields, unions, and class members.
+	<br><br>
+	A <em><strong>prvalue</strong></em> expression has <strong>no address</strong> that is accessible by your program. Examples of prvalue expressions include literals, function calls that return a non-reference type, and temporary objects that are created during expression evalution but accessible only by the compiler.
+	<br><br>
+	An <em><strong>xvalue</strong></em> expression has <strong>an address that no longer accessible by your program</strong> but can be used to initialize an rvalue reference, which provides access to the expression. Examples include function calls that return an rvalue reference, and the array subscript, member and pointer to member expressions where the array or object is an rvalue reference.
+	<br><br>
+	A <em><strong>glvalue</strong></em> is an expression whose evaluation determines the identity of an object, bit-field, or function.
+	<br><br>
+	An <em><strong>rvalue</strong></em> is a prvalue or an xvalue.
 </p>
 
 ### Example 
