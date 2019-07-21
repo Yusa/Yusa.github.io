@@ -10,7 +10,7 @@ This post is the inital post of a series I am going to be writing about the C++ 
 
 In this post I will be explaining fundamental concepts which will be used and further evaluated in the following posts.
 
-### Major C++ versions
+## Major C++ versions
 
 | Abbr. |     Version    |
 |:-----:|:--------------:|
@@ -21,15 +21,15 @@ In this post I will be explaining fundamental concepts which will be used and fu
 | C++17 | fifth edition  |
 
 
-### RValue - LValue
+## RValue - LValue
 
-- If you can take the address of the expression then it is LVALUE; if not, then it is RVALUE. (Generally)
+If you can take the address of the expression then it is LVALUE; if not, then it is RVALUE. (Generally)
 
 <a href="https://docs.microsoft.com/tr-tr/cpp/cpp/lvalues-and-rvalues-visual-cpp?view=vs-2019" target="_blank"> Microsoft Documents</a> states the difference as follows: 
 
 
 <p align="center">
-  <img src="./images/r-l-values.png" alt="RValues - LValues graph"/>
+  <img src="/assets/images/r-l-values.png" alt="RValues - LValues graph"/>
 </p>
 
 
@@ -43,10 +43,10 @@ In this post I will be explaining fundamental concepts which will be used and fu
 
 > An **_rvalue_** is a prvalue or an xvalue.
 
-#### Example 
+### Example 
 
 The following code block (again from Microsoft Documents) clearly states the difference between rvalues and lvalues.
-{% highlight cpp %}
+~~~cpp
 // lvalues_and_rvalues2.cpp
 int main()
 {
@@ -69,29 +69,29 @@ int main()
     const int ci = 7;
     ci = 9; // C3892
 }
-{% endhighlight %}
+~~~
 
 
 In simple terms: lvalues are the expressions that can be on both sides of an assignment operation, rvalues are the expressions that can only be on the right of an assignment operation.
 
 
-### Pointers
+## Pointers
 
 Pointers are simply variables that points to a memory address which stores a value of type as the same as pointer's. A pointer is declared with the asterisk symbol before variable name(identifier). The following code block shows the example pointer declaration and assignment.
 
-{% highlight cpp %}
+~~~cpp
 int myInt = 5;
 int *p1 = myInt;	 
-{% endhighlight %}
+~~~
 
 In the following image the memory and variables is shown after 1st and 2nd line of code is executed.
 
 <p align="center">
-  <img src="./images/pointer-2.png" alt="Memory at pointer operation"/>
+  <img src="/assets/images/pointer-2.png" alt="Memory at pointer operation"/>
 </p>
 
 
-### References
+## References
 
 References are like pointers. It stores the memory address of the object where it is stored. The **difference** of reference from pointer is: while pointers can refer another object after initialization, the object a refence refers can not change after initialization.
 
@@ -100,14 +100,14 @@ There are two kinds of references:
 - rvalue references: They refer to a temporary object. The && operator signifies either an rvalue reference.
 
 
-#### Lvalue Reference Declarator
+### Lvalue Reference Declarator
 
 Lvalue reference like assigning another name for a variable. For example:
 
-{% highlight cpp %}
+```cpp
 int x = 5;
 int & y = x;
-{% endhighlight %}
+```
 
 In the previous code block:
 - Firstly an integer object is created with the identifier x. Let's say x is stored at the memory address 0x004004AC. 
@@ -115,11 +115,11 @@ In the previous code block:
 
 Now i can access the value in memory cell 0x004004AC both via x and y. They modify the same cell.
 
-##### Example
+#### Example
 
 The following code block shows the use of lvalue reference declarator.
 
-{% highlight cpp %}
+~~~cpp
 // compiled with: Visual Studio 2017 (v141)
 #include <iostream>
 using namespace std;
@@ -207,13 +207,13 @@ int main()
 
 	return 0;
 }
-{% endhighlight %}
+~~~
 
-#### Rvalue Reference Declarator
+### Rvalue Reference Declarator
 
 They hold reference to rvalue expressions. And declared as in the following example:
 
-{% highlight cpp %}
+~~~cpp
 using namespace std;
 
 struct Person
@@ -240,13 +240,13 @@ int main()
 
 	return 0; 
 }
-{% endhighlight %}
+~~~
 
 So what is the purpose of referencing to temporary objects?
 
 The main motivation behind this is about the inefficiency of returning complex objects in pre-C++11 versions. Let's say we have the following function.
 
-{% highlight cpp %}
+```cpp
 string concatStrings(string s1, string s2){
 	string totalString = ""; // A memory space is allocated for totalString variable
 
@@ -254,7 +254,7 @@ string concatStrings(string s1, string s2){
 
 	return totalString; // Then this total string variable is destroyed and a copy of it is returned.
 }
-{% endhighlight %}
+```
 
 In the function, a local variable is created, and a memory space is allocated for that variable. After that, when it is time to return the result of the concatenation operation, a copy of the string object is created with __copy constructor__ and it is returned to where the function is called from.
 
