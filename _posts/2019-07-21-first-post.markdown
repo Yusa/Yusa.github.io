@@ -261,4 +261,4 @@ In the function, a local variable is created, and a memory space is allocated fo
 
 Since there is redundant memory allocation process in this method, developers used to avoid returning complex objects before C++11. Instead they used pointers to avoid redundant copy process.
 
-Then with the C++11 a new method, **move** and **move constructor** was introduced. I will be talking about this topic deeply in the following posts; so that simple what it does is avoiding redundant copy when returning an object from a function. The ownership of the resource allocated for the local variable in the function is transferred to caller of the function with the help of **rvalue referencing**.
+Then with the C++11 a new method, **move** and **move constructor** was introduced. I will be talking about this topic deeply in the following posts; so that, simply what it does is avoiding redundant copy when returning an object from a function. The ownership of the resource allocated for the local variable in the function is transferred to caller of the function with the help of **rvalue referencing**.
