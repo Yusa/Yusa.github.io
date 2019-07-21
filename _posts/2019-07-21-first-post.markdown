@@ -19,7 +19,6 @@ In this post I will be explaining fundamental concepts which will be used and fu
 | C++11 |  third edition |
 | C++14 | fourth edition |
 | C++17 | fifth edition  |
-{: .table}
 
 
 ## RValue - LValue
@@ -34,8 +33,7 @@ If you can take the address of the expression then it is LVALUE; if not, then it
 </p>
 
 
-An **_lvalue_** has an **address** that your program can access. Examples of lvalue expressions include variable names, including const variables, array elements, function calls that return an lvalue reference, bit-fields, unions, and class members.
-{: .blockquote}
+> An **_lvalue_** has an **address** that your program can access. Examples of lvalue expressions include variable names, including const variables, array elements, function calls that return an lvalue reference, bit-fields, unions, and class members.
 
 A **_prvalue_** expression has **no address** that is accessible by your program. Examples of prvalue expressions include literals, function calls that return a non-reference type, and temporary objects that are created during expression evalution but accessible only by the compiler.
 
