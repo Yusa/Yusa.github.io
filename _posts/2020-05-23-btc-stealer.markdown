@@ -42,7 +42,7 @@ Then finally it redirects the user to:
   <img src="/assets/images/binance1.png"/>
 </p>
 
-</br>
+
 
 The website seems like a phishing of binance.com, however when the user clicks on login or register it creates a pop-up with the following message:
 ```
